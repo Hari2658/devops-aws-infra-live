@@ -1,7 +1,7 @@
 FROM  node:18-alpine
-WORKDIR ./app
+WORKDIR /app
 COPY package*.json ./
 RUN npm install --dev
-COPY ..
+COPY ./app
 EXPOSE 3000
 CMD ["node", "index.js"]
